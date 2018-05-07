@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <title>{% block title %}codename_svv{% endblock %}</title>
 </head>
-<body>
 {% block nav %}
-<nav></nav>
+<nav>
+    <a href="main_page">Кто мы такие</a>  |
+    <a href="main_page">Партнерам</a>  |
+    <a href="main_page">Правила</a>  |
+    {% if user.is_authenticated %}
+        <a href="main_page">Выход</a>
+    {% else %}
+        <a href="main_page">Вход</a>
+    {% endif %}
+</nav>
+<hr>
+{% endblock %}
+{% block aside %}
+<aside>
+    <H4>Главное</H4>
+    <p><a href="main_page">Аккаунт</a></p>
+    <p><a href="main_page">Друзья</a></p>
+    <p><a href="main_page">Подписки</a></p>
+    <p><a href="main_page">Новости</a></p>
+    <p><a href="main_page">Сообщения</a></p>
+    <p><a href="main_page">Чат</a></p>
+    <H4>Покупки</H4>
+    <p><a href="main_page">Объявления</a></p>
+    <p><a href="main_page">Мои заказы</a></p>
+    <p><a href="main_page">Обмен</a></p>
+    <H4>Полезно</H4>
+    <p><a href="main_page">Майнинг</a></p>
+    <p><a href="main_page">Биржи</a></p>
+    <p><a href="main_page">ICO</a></p>
+</aside>
 {% endblock %}
 </body>
 </html>
