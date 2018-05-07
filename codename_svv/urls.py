@@ -17,10 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.views.static import serve
+from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url('/profile/', include('profiles.urls')),
+    url('profile/', include('profiles.urls')),
+    url('^$', RedirectView.as_view(url='/profile/'))
 ]
 
 if settings.DEBUG:
