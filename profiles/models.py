@@ -12,7 +12,7 @@ class Person(models.Model):
     nick_name = models.CharField(max_length=20, verbose_name='Псевдоним', blank=True)
     country = models.CharField(max_length=20, verbose_name='Страна', blank=True)
     city = models.CharField(max_length=20, verbose_name='Город', blank=True)
-    about_me = models.TextField(verbose_name='Обо мне')
+    about_me = models.TextField(verbose_name='Обо мне', default=None, blank=True, null=True)
     photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
 
     def __str__(self):
