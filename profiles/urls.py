@@ -2,5 +2,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url('', views.empty_view, name='main_page')
+    url('^main/', views.my_page, name='main_page'),
+    url('^not_exists/', views.empty_view, name='empty_page'),
 ]

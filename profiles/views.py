@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
-def empty_view(request):
+def my_page(request):
     template = 'profile.html'
+    context = {}
+    return render(request, template, context)
+
+def empty_view(request):
+    template = 'empty.html'
     context = {}
     return render(request=request, template_name=template, context=context)
 
