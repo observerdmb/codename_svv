@@ -6,13 +6,20 @@ def upload_to(instance, filename):
     return 'images/%s/%s' % (instance.user.user.username, filename)
 
 class Person(models.Model):
-    login_name = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Профиль')
+    login_name = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Логин')
     first_name = models.CharField(max_length=15, verbose_name='Имя')
-    last_name = models.CharField(max_length=15, verbose_name='Фамилия')
-    photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото')
+    last_name = models.CharField(max_length=15, verbose_name='Фамилия', blank=True)
+    nick_name = models.CharField(max_length=20, verbose_name='Псевдоним', blank=True)
+    country = models.CharField(max_length=20, verbose_name='Страна', blank=True)
+    city = models.CharField(max_length=20, verbose_name='Город', blank=True)
+    about_me = models.TextField(verbose_name='Обо мне')
+    photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
 
     def __str__(self):
-        return str(self.last_name) + ' ' + str(self.first_name)
+        if self.last_name:
+            return str(self.last_name) + ' ' + str(self.first_name)
+        else:
+            return self.first_name
 
     class Meta:
         verbose_name = 'Профиль'
