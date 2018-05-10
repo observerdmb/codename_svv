@@ -14,7 +14,7 @@
         {% if user.is_authenticated %}
         <a href="{% url 'empty_page' %}">Выход</a>
         {% else %}
-        <a href="{% url 'empty_page' %}">Вход</a>  |  <a href="{% url 'empty_page' %}">Регистрация</a>
+        <a href="{% url 'empty_page' %}">Вход</a>  |  <a href="{% url 'register' %}">Регистрация</a>
         {% endif %}
         <hr>
     </div>
