@@ -21,7 +21,6 @@ body {
 
 #content {
 	float: right;
-	background: white;
 	height: 650px;
 	width: 750px;
 }
@@ -32,7 +31,6 @@ body {
 
 #footer {
 	clear: both;
-	background: orange;
 	height: 50px;
 	width: 900px;
 }

@@ -6,7 +6,7 @@ def upload_to(instance, filename):
     return 'images/%s/%s' % (instance.user.user.username, filename)
 
 class Person(models.Model):
-    login_name = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Логин')
+    login_name = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Имя пользователя')
     first_name = models.CharField(max_length=15, verbose_name='Имя')
     last_name = models.CharField(max_length=15, verbose_name='Фамилия', blank=True)
     nick_name = models.CharField(max_length=20, verbose_name='Псевдоним', blank=True)
