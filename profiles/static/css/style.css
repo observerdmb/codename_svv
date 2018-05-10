@@ -1,38 +1,40 @@
 body {
-	background: #c9d2ff;
+	background: #f3f3f3;
 }
 
-# container {
-	background: 96ffa1;
+#container {
 	height: 900px;
-	width: 700px;
+	width: 900px;
 }
 	
-# navigation {
-	background: fff236;
-	height: 200px;
-	width: 700px;
+#navigation {
+	background: ffffff;
+	height: 50px;
+	width: 900px;
 }
 
-# menu {
+#menu {
 	float: left;
-	background: blue;
-	height: 500px;
-	width: 300px;
-	overflow: scrol;
+	height: 650px;
+	width: 150px;
 }
 
-# content {
+#content {
 	float: right;
 	background: white;
-	height: 500px;
-	width: 400px;
+	height: 650px;
+	width: 750px;
 }
 
-# footer {
+#clear: {
+	clear: both;
+}
+
+#footer {
+	clear: both;
 	background: orange;
-	height: 200px;
-	width: 700px;
+	height: 50px;
+	width: 900px;
 }
 
 h1 {
