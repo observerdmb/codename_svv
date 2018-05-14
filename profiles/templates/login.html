@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Вход</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Имя пользователя: <input type="text" name="username"></p>
+    <p>Пароль: <input type="password" name="password"></p>
+    <p><input type="submit" value="Вход"></p>
+</form>
+{% endblock %}

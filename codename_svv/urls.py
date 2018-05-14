@@ -21,8 +21,8 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('registration.backends.simple.urls')),
-    url('profile/', include('profiles.urls'), name='registration'),
+    url(r'accounts/', include('registration.backends.simple.urls')),
+    url('profile/', include('profiles.urls')),
     url('^$', RedirectView.as_view(url='/profile/'))
 ]
 

@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Контент</h1>
+<h1>My page</h1>
+<p>Имя пользователя: {{ username }}</p>
+<p>E-Mail: {{ email }}</p>
+<p>Имя: {{ first_name }}</p>
+<p>Фамилия: {{ last_name }}</p>
 {% endblock %}
